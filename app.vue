@@ -1,6 +1,7 @@
 <template>
   <div>
     <NuxtPage></NuxtPage>
+    <br/>
   </div>
 </template>
 <script>
