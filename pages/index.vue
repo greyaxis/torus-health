@@ -1,89 +1,89 @@
 <script>
-// import { Swiper, SwiperSlide } from "swiper/vue";
-// import "swiper/css";
-// import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
-// import "swiper/css";
-// import "swiper/css/navigation";
-// import "swiper/css/pagination";
-// import "swiper/css/scrollbar";
-// export default {
-//   name: "home",
-//   components: {
-//     Swiper,
-//     SwiperSlide,
-//   },
-//   data() {
-//     return {
-//       isActive: false,
-//       submenuActive: false,
-//       submenuActivetwo: false,
-//       submenuActivethree: false,
-//       submenuActivefour: false,
-//     };
-//   },
-//   methods: {
-//     updateTime() {
-//       const now = new Date();
-//       let hours = now.getHours();
-//       const minutes = now.getMinutes();
-//       const ampm = hours >= 12 ? "PM" : "AM";
-//       hours = hours % 12;
-//       hours = hours ? hours : 12; // the hour '0' should be '12'
-//       const minutesStr = minutes < 10 ? "0" + minutes : minutes;
-//       this.formattedTime = `${hours}:${minutesStr} ${ampm}`;
-//     },
-//     toggleMenu() {
-//       this.isActive = !this.isActive;
-//     },
-//     SubMenuLinkOne() {
-//       this.submenuActive = !this.submenuActive;
-//     },
-//     SubMenuLinkTwo() {
-//       this.submenuActivetwo = !this.submenuActivetwo;
-//     },
-//     SubMenuLinkThree() {
-//       this.submenuActivethree = !this.submenuActivethree;
-//     },
-//     SubMenuLinkFour() {
-//       this.submenuActivefour = !this.submenuActivefour;
-//     },
-//     scrollToTop() {
-//       window.scrollTo({
-//         top: 0,
-//         behavior: "smooth",
-//       });
-//     },
-//     handleScroll() {
-//       if (window.pageYOffset > 100) {
-//         this.showButton = true;
-//       } else {
-//         this.showButton = false;
-//       }
-//     },
-//   },
-//   beforeMount() {
-//     window.addEventListener("scroll", this.handleScroll);
-//   },
-//   beforeDestroy() {
-//     window.removeEventListener("scroll", this.handleScroll);
-//   },
-//   mounted() {
-//     setInterval(this.updateTime, 1000);
-//   },
-//   setup() {
-//     const onSwiper = (swiper) => {
-//       console.log(swiper);
-//     };
-//     const onSlideChange = () => {
-//       console.log("slide change");
-//     };
-//     return {
-//       onSwiper,
-//       onSlideChange,
-//       modules: [Navigation, Pagination, Scrollbar, A11y],
-//     };
-//   },
-// };
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+export default {
+  name: "home",
+  components: {
+    Swiper,
+    SwiperSlide,
+  },
+  data() {
+    return {
+      isActive: false,
+      submenuActive: false,
+      submenuActivetwo: false,
+      submenuActivethree: false,
+      submenuActivefour: false,
+    };
+  },
+  methods: {
+    updateTime() {
+      const now = new Date();
+      let hours = now.getHours();
+      const minutes = now.getMinutes();
+      const ampm = hours >= 12 ? "PM" : "AM";
+      hours = hours % 12;
+      hours = hours ? hours : 12; // the hour '0' should be '12'
+      const minutesStr = minutes < 10 ? "0" + minutes : minutes;
+      this.formattedTime = `${hours}:${minutesStr} ${ampm}`;
+    },
+    toggleMenu() {
+      this.isActive = !this.isActive;
+    },
+    SubMenuLinkOne() {
+      this.submenuActive = !this.submenuActive;
+    },
+    SubMenuLinkTwo() {
+      this.submenuActivetwo = !this.submenuActivetwo;
+    },
+    SubMenuLinkThree() {
+      this.submenuActivethree = !this.submenuActivethree;
+    },
+    SubMenuLinkFour() {
+      this.submenuActivefour = !this.submenuActivefour;
+    },
+    scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    },
+    handleScroll() {
+      if (window.pageYOffset > 100) {
+        this.showButton = true;
+      } else {
+        this.showButton = false;
+      }
+    },
+  },
+  beforeMount() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.handleScroll);
+  },
+  mounted() {
+    setInterval(this.updateTime, 1000);
+  },
+  setup() {
+    const onSwiper = (swiper) => {
+      console.log(swiper);
+    };
+    const onSlideChange = () => {
+      console.log("slide change");
+    };
+    return {
+      onSwiper,
+      onSlideChange,
+      modules: [Navigation, Pagination, Scrollbar, A11y],
+    };
+  },
+};
 </script>
 <template>
   <div class="ga-container health-styles">
@@ -247,7 +247,7 @@
               >
             </div>
             <div class="mm-img">
-              <!-- <img src="/assets/media/mmda.png" alt="" /> -->
+              <img src="/assets/media/mmda.png" alt="" />
             </div>
           </div>
         </div>
@@ -275,7 +275,8 @@
               </div>
             </div>
             <div class="hb-media">
-              <img src="/assets/media/h-banner.png" alt="" />
+              <img class="d-img" src="/assets/media/h-banner.png" alt="" />
+              <img class="m-img" src="/assets/media/m-h-banner.png" alt="" />
             </div>
           </div>
         </div>
@@ -290,7 +291,8 @@
               <div class="hlt-left-content">
                 <h3>
                   Everyone’s path <br class="d-br" />
-                  to good <span>Health</span> <br class="d-br" />
+                  to<br class="m-br" />
+                  good <span>Health</span> <br class="d-br" />
                   is different.
                 </h3>
                 <p class="desc">We're here to help you find Yours. </p>
@@ -299,7 +301,7 @@
             <div class="hlt-right">
               <div class="sec-title">
                 <h3>
-                  Get lab tests done from <br />
+                  Get lab tests done from <br class="d-br" />
                   the <span>Comfort</span> of your home!
                 </h3>
               </div>
@@ -412,7 +414,7 @@
             <div class="ht-left">
               <div class="sec-title">
                 <h3>
-                  Where <br />
+                  Where <br class="d-br" />
                   wellness meets transformation.
                 </h3>
                 <p class="desc">
@@ -485,8 +487,8 @@
             </div>
             <div class="mco-block medium-block co-5">
               <div class="mco-block-inner">
-                <h5>Happy <br />Customers</h5>
-                <h3>10k+</h3>
+                <h5>Happy <br class="d-br" />Customers</h5>
+                <h3>10K+</h3>
               </div>
             </div>
             <div class="mco-block medium-block co-6">
@@ -505,19 +507,24 @@
           </div>
           <div class="hs-wrap">
             <a href="" class="hs-card">
-              <img src="/assets/media/hs-card3.png" alt="" />
+              <img class="d-img" src="/assets/media/hs-card3.png" alt="" />
+              <img class="m-img" src="/assets/media/m-hs-card3.png" alt="" />
+            </a>
+            <a href="" class="hs-card ss-card">
+              <img class="d-img" src="/assets/media/hs-card1.png" alt="" />
+              <img class="m-img" src="/assets/media/m-hs-card1.png" alt="" />
             </a>
             <a href="" class="hs-card">
-              <img src="/assets/media/hs-card1.png" alt="" />
+              <img class="d-img" src="/assets/media/hs-card4.png" alt="" />
+              <img class="m-img" src="/assets/media/m-hs-card4.png" alt="" />
             </a>
-            <a href="" class="hs-card">
-              <img src="/assets/media/hs-card4.png" alt="" />
+            <a href="" class="hs-card ss-card">
+              <img class="d-img" src="/assets/media/hs-card5.png" alt="" />
+              <img class="m-img" src="/assets/media/m-hs-card5.png" alt="" />
             </a>
-            <a href="" class="hs-card">
-              <img src="/assets/media/hs-card5.png" alt="" />
-            </a>
-            <a href="" class="hs-card">
-              <img src="/assets/media/hs-card2.png" alt="" />
+            <a href="" class="hs-card ss-card">
+              <img class="d-img" src="/assets/media/hs-card2.png" alt="" />
+              <img class="m-img" src="/assets/media/m-hs-card2.png" alt="" />
             </a>
           </div>
         </div>
@@ -526,14 +533,19 @@
         <div class="hc-inner">
           <div class="hc-wrap">
             <div class="hc-l">
-              <img src="/assets/media/hc-l.png" alt="" />
+              <img class="d-img" src="/assets/media/hc-l.png" alt="" />
+              <img class="m-img" src="/assets/media/m-hc-l.png" alt="" />
             </div>
             <div class="hc-c">
               <div class="sec-title">
-                <h3>Let us take care of you.</h3>
+                <h3>
+                  Let us take <br class="m-br" />
+                  <span>care</span> of you.
+                </h3>
               </div>
               <p class="desc">
-                Heal with the world's greatest holistic and clinical
+                Heal with the <br class="m-br" />
+                world's greatest <br class="m-br" />holistic and clinical
                 practitioners today! We’re here to make wellness accessible and
                 affordable, bridging traditional wisdom with modern practices to
                 elevate wellbeing across India.
@@ -543,7 +555,8 @@
               </div>
             </div>
             <div class="hc-r">
-              <img src="/assets/media/hc-r.png" alt="" />
+              <img class="d-img" src="/assets/media/hc-r.png" alt="" />
+              <img class="m-img" src="/assets/media/m-hc-r.png" alt="" />
             </div>
           </div>
         </div>
@@ -625,6 +638,7 @@
           </div>
           <div class="hcu-base">
             <svg
+              class="d-img"
               width="1920"
               height="1696"
               viewBox="0 0 1920 1696"
@@ -702,6 +716,77 @@
                   y1="1717.58"
                   x2="1154.71"
                   y2="2232.39"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#EBCBF4" />
+                  <stop offset="0.46" stop-color="#EBCBF4" stop-opacity="0.4" />
+                </linearGradient>
+              </defs>
+            </svg>
+            <svg
+              class="m-img"
+              width="750"
+              height="1088"
+              viewBox="0 0 750 1088"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M194.498 1063.32L-71.4143 845.669C-118.048 806.91 -133.356 740.579 -106.383 685.411L-67.7707 604.157L194.498 1063.32Z"
+                fill="url(#paint0_linear_1232_751)"
+              />
+              <path
+                d="M-168 531.666L146.166 132.153L68.6824 121.887C39.8106 118.051 10.548 124.764 -14.0272 140.861C-38.6024 156.958 -56.9392 181.424 -65.8555 210.012L-168 531.666Z"
+                fill="url(#paint1_linear_1232_751)"
+              />
+              <path
+                d="M194.498 -0.00088501L701.997 193.332L685.742 110.708C673.356 47.7904 617.657 1.55809 551.908 1.55809L194.498 -0.00088501Z"
+                fill="url(#paint2_linear_1232_751)"
+              />
+              <path
+                d="M315.332 973.614L376.046 1044.04C396.139 1067.28 422.807 1082.21 451.617 1086.33C480.426 1090.45 509.641 1083.53 534.404 1066.7L822.831 869.993L315.332 973.614Z"
+                fill="url(#paint3_linear_1232_751)"
+              />
+              <defs>
+                <linearGradient
+                  id="paint0_linear_1232_751"
+                  x1="-96.6862"
+                  y1="689.528"
+                  x2="219.432"
+                  y2="888.812"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#EBCBF4" />
+                  <stop offset="0.46" stop-color="#EBCBF4" stop-opacity="0.4" />
+                </linearGradient>
+                <linearGradient
+                  id="paint1_linear_1232_751"
+                  x1="-145.018"
+                  y1="197.218"
+                  x2="150.184"
+                  y2="405.211"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#EBCBF4" />
+                  <stop offset="0.46" stop-color="#EBCBF4" stop-opacity="0.4" />
+                </linearGradient>
+                <linearGradient
+                  id="paint2_linear_1232_751"
+                  x1="231.623"
+                  y1="35.9449"
+                  x2="335.803"
+                  y2="287.915"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#EBCBF4" />
+                  <stop offset="0.46" stop-color="#EBCBF4" stop-opacity="0.4" />
+                </linearGradient>
+                <linearGradient
+                  id="paint3_linear_1232_751"
+                  x1="352.456"
+                  y1="910.432"
+                  x2="479.387"
+                  y2="1183.32"
                   gradientUnits="userSpaceOnUse"
                 >
                   <stop stop-color="#EBCBF4" />
@@ -1143,7 +1228,6 @@
     </footer>
   </div>
 </template>
-
 <style>
 @import url(/assets/css/style.css);
 </style>

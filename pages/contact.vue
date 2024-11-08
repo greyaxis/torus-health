@@ -1,89 +1,89 @@
 <script>
-// import { Swiper, SwiperSlide } from "swiper/vue";
-// import "swiper/css";
-// import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
-// import "swiper/css";
-// import "swiper/css/navigation";
-// import "swiper/css/pagination";
-// import "swiper/css/scrollbar";
-// export default {
-//   name: "home",
-//   components: {
-//     Swiper,
-//     SwiperSlide,
-//   },
-//   data() {
-//     return {
-//       isActive: false,
-//       submenuActive: false,
-//       submenuActivetwo: false,
-//       submenuActivethree: false,
-//       submenuActivefour: false,
-//     };
-//   },
-//   methods: {
-//     updateTime() {
-//       const now = new Date();
-//       let hours = now.getHours();
-//       const minutes = now.getMinutes();
-//       const ampm = hours >= 12 ? "PM" : "AM";
-//       hours = hours % 12;
-//       hours = hours ? hours : 12; // the hour '0' should be '12'
-//       const minutesStr = minutes < 10 ? "0" + minutes : minutes;
-//       this.formattedTime = `${hours}:${minutesStr} ${ampm}`;
-//     },
-//     toggleMenu() {
-//       this.isActive = !this.isActive;
-//     },
-//     SubMenuLinkOne() {
-//       this.submenuActive = !this.submenuActive;
-//     },
-//     SubMenuLinkTwo() {
-//       this.submenuActivetwo = !this.submenuActivetwo;
-//     },
-//     SubMenuLinkThree() {
-//       this.submenuActivethree = !this.submenuActivethree;
-//     },
-//     SubMenuLinkFour() {
-//       this.submenuActivefour = !this.submenuActivefour;
-//     },
-//     scrollToTop() {
-//       window.scrollTo({
-//         top: 0,
-//         behavior: "smooth",
-//       });
-//     },
-//     handleScroll() {
-//       if (window.pageYOffset > 100) {
-//         this.showButton = true;
-//       } else {
-//         this.showButton = false;
-//       }
-//     },
-//   },
-//   beforeMount() {
-//     window.addEventListener("scroll", this.handleScroll);
-//   },
-//   beforeDestroy() {
-//     window.removeEventListener("scroll", this.handleScroll);
-//   },
-//   mounted() {
-//     setInterval(this.updateTime, 1000);
-//   },
-//   setup() {
-//     const onSwiper = (swiper) => {
-//       console.log(swiper);
-//     };
-//     const onSlideChange = () => {
-//       console.log("slide change");
-//     };
-//     return {
-//       onSwiper,
-//       onSlideChange,
-//       modules: [Navigation, Pagination, Scrollbar, A11y],
-//     };
-//   },
-// };
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+export default {
+  name: "home",
+  components: {
+    Swiper,
+    SwiperSlide,
+  },
+  data() {
+    return {
+      isActive: false,
+      submenuActive: false,
+      submenuActivetwo: false,
+      submenuActivethree: false,
+      submenuActivefour: false,
+    };
+  },
+  methods: {
+    updateTime() {
+      const now = new Date();
+      let hours = now.getHours();
+      const minutes = now.getMinutes();
+      const ampm = hours >= 12 ? "PM" : "AM";
+      hours = hours % 12;
+      hours = hours ? hours : 12; // the hour '0' should be '12'
+      const minutesStr = minutes < 10 ? "0" + minutes : minutes;
+      this.formattedTime = `${hours}:${minutesStr} ${ampm}`;
+    },
+    toggleMenu() {
+      this.isActive = !this.isActive;
+    },
+    SubMenuLinkOne() {
+      this.submenuActive = !this.submenuActive;
+    },
+    SubMenuLinkTwo() {
+      this.submenuActivetwo = !this.submenuActivetwo;
+    },
+    SubMenuLinkThree() {
+      this.submenuActivethree = !this.submenuActivethree;
+    },
+    SubMenuLinkFour() {
+      this.submenuActivefour = !this.submenuActivefour;
+    },
+    scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    },
+    handleScroll() {
+      if (window.pageYOffset > 100) {
+        this.showButton = true;
+      } else {
+        this.showButton = false;
+      }
+    },
+  },
+  beforeMount() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.handleScroll);
+  },
+  mounted() {
+    setInterval(this.updateTime, 1000);
+  },
+  setup() {
+    const onSwiper = (swiper) => {
+      console.log(swiper);
+    };
+    const onSlideChange = () => {
+      console.log("slide change");
+    };
+    return {
+      onSwiper,
+      onSlideChange,
+      modules: [Navigation, Pagination, Scrollbar, A11y],
+    };
+  },
+};
 </script>
 <template>
   <div class="ga-container health-styles h-s-contact">
@@ -247,7 +247,7 @@
               >
             </div>
             <div class="mm-img">
-              <!-- <img src="/assets/media/mmda.png" alt="" /> -->
+              <img src="/assets/media/mmda.png" alt="" />
             </div>
           </div>
         </div>

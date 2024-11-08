@@ -1,89 +1,89 @@
 <script>
-// import { Swiper, SwiperSlide } from "swiper/vue";
-// import "swiper/css";
-// import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
-// import "swiper/css";
-// import "swiper/css/navigation";
-// import "swiper/css/pagination";
-// import "swiper/css/scrollbar";
-// export default {
-//   name: "home",
-//   components: {
-//     Swiper,
-//     SwiperSlide,
-//   },
-//   data() {
-//     return {
-//       isActive: false,
-//       submenuActive: false,
-//       submenuActivetwo: false,
-//       submenuActivethree: false,
-//       submenuActivefour: false,
-//     };
-//   },
-//   methods: {
-//     updateTime() {
-//       const now = new Date();
-//       let hours = now.getHours();
-//       const minutes = now.getMinutes();
-//       const ampm = hours >= 12 ? "PM" : "AM";
-//       hours = hours % 12;
-//       hours = hours ? hours : 12; // the hour '0' should be '12'
-//       const minutesStr = minutes < 10 ? "0" + minutes : minutes;
-//       this.formattedTime = `${hours}:${minutesStr} ${ampm}`;
-//     },
-//     toggleMenu() {
-//       this.isActive = !this.isActive;
-//     },
-//     SubMenuLinkOne() {
-//       this.submenuActive = !this.submenuActive;
-//     },
-//     SubMenuLinkTwo() {
-//       this.submenuActivetwo = !this.submenuActivetwo;
-//     },
-//     SubMenuLinkThree() {
-//       this.submenuActivethree = !this.submenuActivethree;
-//     },
-//     SubMenuLinkFour() {
-//       this.submenuActivefour = !this.submenuActivefour;
-//     },
-//     scrollToTop() {
-//       window.scrollTo({
-//         top: 0,
-//         behavior: "smooth",
-//       });
-//     },
-//     handleScroll() {
-//       if (window.pageYOffset > 100) {
-//         this.showButton = true;
-//       } else {
-//         this.showButton = false;
-//       }
-//     },
-//   },
-//   beforeMount() {
-//     window.addEventListener("scroll", this.handleScroll);
-//   },
-//   beforeDestroy() {
-//     window.removeEventListener("scroll", this.handleScroll);
-//   },
-//   mounted() {
-//     setInterval(this.updateTime, 1000);
-//   },
-//   setup() {
-//     const onSwiper = (swiper) => {
-//       console.log(swiper);
-//     };
-//     const onSlideChange = () => {
-//       console.log("slide change");
-//     };
-//     return {
-//       onSwiper,
-//       onSlideChange,
-//       modules: [Navigation, Pagination, Scrollbar, A11y],
-//     };
-//   },
-// };
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+export default {
+  name: "home",
+  components: {
+    Swiper,
+    SwiperSlide,
+  },
+  data() {
+    return {
+      isActive: false,
+      submenuActive: false,
+      submenuActivetwo: false,
+      submenuActivethree: false,
+      submenuActivefour: false,
+    };
+  },
+  methods: {
+    updateTime() {
+      const now = new Date();
+      let hours = now.getHours();
+      const minutes = now.getMinutes();
+      const ampm = hours >= 12 ? "PM" : "AM";
+      hours = hours % 12;
+      hours = hours ? hours : 12; // the hour '0' should be '12'
+      const minutesStr = minutes < 10 ? "0" + minutes : minutes;
+      this.formattedTime = `${hours}:${minutesStr} ${ampm}`;
+    },
+    toggleMenu() {
+      this.isActive = !this.isActive;
+    },
+    SubMenuLinkOne() {
+      this.submenuActive = !this.submenuActive;
+    },
+    SubMenuLinkTwo() {
+      this.submenuActivetwo = !this.submenuActivetwo;
+    },
+    SubMenuLinkThree() {
+      this.submenuActivethree = !this.submenuActivethree;
+    },
+    SubMenuLinkFour() {
+      this.submenuActivefour = !this.submenuActivefour;
+    },
+    scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    },
+    handleScroll() {
+      if (window.pageYOffset > 100) {
+        this.showButton = true;
+      } else {
+        this.showButton = false;
+      }
+    },
+  },
+  beforeMount() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.handleScroll);
+  },
+  mounted() {
+    setInterval(this.updateTime, 1000);
+  },
+  setup() {
+    const onSwiper = (swiper) => {
+      console.log(swiper);
+    };
+    const onSlideChange = () => {
+      console.log("slide change");
+    };
+    return {
+      onSwiper,
+      onSlideChange,
+      modules: [Navigation, Pagination, Scrollbar, A11y],
+    };
+  },
+};
 </script>
 <template>
   <div class="ga-container health-styles">
@@ -247,17 +247,53 @@
               >
             </div>
             <div class="mm-img">
-              <!-- <img src="/assets/media/mmda.png" alt="" /> -->
+              <img src="/assets/media/mmda.png" alt="" />
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="main-content" :class="{ bodyNone: isActive }">
+      <div class="health-about-intro">
+        <div class="hai-inner">
+          <div class="hai-wrap">
+            <div class="hai-l">
+              <div class="sec-title">
+                <h3>
+                  Your <span>Health</span>,<br />
+                  Our <span>Mission</span>
+                </h3>
+              </div>
+              <p>
+                We founded Torus <i>Health</i> with the belief that everyone
+                deserves to live a healthy and fulfilling life. Our mission is
+                to empower individuals to take control of their health and
+                well-being through personalized care and holistic treatments.
+              </p>
+            </div>
+            <div class="hai-r">
+              <div class="hai-img">
+                <img class="d-img" src="/assets/media/hai-img.png" alt="" />
+                <img class="m-img" src="/assets/media/m-hai-img.png" alt="" />
+              </div>
+              <p>
+                Our platform offers a wide range of services, from doctor
+                consultations and diagnostic tests to wellness products and
+                therapies.
+              </p>
+              <p>
+                We're committed to making healthcare accessible and affordable,
+                so you can focus on what matters most: your well-being.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="health-board-members h-board-directors">
         <div class="mbm-inner">
           <div class="h-title-banner">
-            <img src="/assets/media/h-t-banner.png" alt="" />
+            <img class="d-img" src="/assets/media/h-t-banner.png" alt="" />
+            <img class="m-img" src="/assets/media/m-h-t-banner.png" alt="" />
           </div>
           <div class="osd-cards-wrap">
             <div class="osd-card card-layout-2">
