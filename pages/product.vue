@@ -382,7 +382,7 @@ export default {
                 holistic health solutions at your fingertips.
               </p>
               <div class="shadow-cta">
-                <a href="">Discover</a>
+                <a href="">Get Started</a>
               </div>
             </div>
             <div class="bg-svg">
@@ -1464,7 +1464,7 @@ export default {
             <div class="link-wrap">
               <div class="links-block">
                 <a href="/">Home</a>
-                <a href="/our-services">Our Services </a>
+                <a href="/product">Product</a>
               </div>
               <div class="links-block ta-right">
                 <a href="/our-story">About Us</a>
@@ -1590,7 +1590,7 @@ export default {
           <div class="f-tnc-links">
             <a href="">Careers </a>
             <a href="">Privacy Policy</a>
-            <a href="">Terms and Conditions</a>
+            <a href="">Shipping & Returns</a>
           </div>
           <div class="contact-wrap tx-right">
             <div class="f-contact">
